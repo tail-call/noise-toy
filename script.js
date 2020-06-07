@@ -16,12 +16,10 @@ function validateWichmannHillStateInteger(x) {
 }
 
 class WichmannHillGenerator {
-    #s1; #s2; #s3;
-
     constructor(state) {
-        this.#s1 = state[0];
-        this.#s2 = state[1];
-        this.#s3 = state[2];
+        this.s1 = state[0];
+        this.s2 = state[1];
+        this.s3 = state[2];
     }
 
     static with(state) {
@@ -31,12 +29,12 @@ class WichmannHillGenerator {
     }
 
     next() {
-        this.#s1 = (171 * this.#s1) % 30269;
-        this.#s2 = (172 * this.#s2) % 30307;
-        this.#s3 = (170 * this.#s3) % 30323;
-        return (this.#s1 / 30269
-                + this.#s2 / 30307
-                + this.#s3 / 30323) % 1.0;
+        this.s1 = (171 * this.s1) % 30269;
+        this.s2 = (172 * this.s2) % 30307;
+        this.s3 = (170 * this.s3) % 30323;
+        return (this.s1 / 30269
+                + this.s2 / 30307
+                + this.s3 / 30323) % 1.0;
     }
 }
 
