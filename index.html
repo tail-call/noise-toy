@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+          background-color: black;
+      }
+      canvas {
+          width: 100%;
+          max-width: 80vh;
+          border-radius: 12px;
+      }
+      section {
+          background-color: #444;
+          color: white;
+          padding: 0.5rem;
+          display: table-cell;
+          font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="128" height="128"></canvas><br>
+    <section>
+      <button>destabilize</button>
+      <p>
+        Contrast <input id="contrast" type="range" min="1" max="10" step="0.01" value="4">
+      </p>
+      <p>
+        Velocity <input id="velocity" type="range" min="1" max="200" value="100">
+      </p>
+      <p>
+        Attenuation <input id="attenuation" type="range" min="0" max="1" step="0.01" value="1">
+      </p>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
